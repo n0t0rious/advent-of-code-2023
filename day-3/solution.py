@@ -44,16 +44,13 @@ def part2(lines):
     for idx, line in enumerate(lines):
         for gear in re.finditer('\*', line):
             gear_y = gear.start()
-            adjacent_coordinates = [(x, y) for x in range(idx - 1, idx + 2) for y in range(gear_y - 1, gear_y + 2)
-                                    if (x, y) != (idx, gear_y)
-                                    and 0 <= x < len(lines)
-                                    and 0 <= y < len(line)]
+            adjacent_coordinates = [(x, y) for x in range(idx - 1, idx + 2) for y in range(gear_y - 1, gear_y + 2)]
             adjacent_parts = set([part_coords[x_y]
                                   for x_y in adjacent_coordinates if x_y in part_coords])
-
             if len(adjacent_parts) == 2:
                 gear_ratios.append(math.prod(adjacent_parts))
     return sum(gear_ratios)
+
 
 if __name__ == '__main__':
     main()
