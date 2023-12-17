@@ -1,5 +1,4 @@
 import re
-import itertools
 import math
 
 
@@ -55,16 +54,6 @@ def part2(lines):
             if len(adjacent_parts) == 2:
                 gear_ratios.append(math.prod(adjacent_parts))
     return sum(gear_ratios)
-
-
-    # TODO:
-    #  1. Iterate through once to get each part number and put into a set
-    #  2. Go through again and match on '*' character
-    #  3. Check adjacency to see if any numbers border it
-    #  4. check 3 places to right and to left from index of '*' character at idx -1, idx, and idx-1 since numbers are
-    #  at max 3 characters. do a regex match to see if this new adjacency matrix contains part nums and store them
-    #  5. check if part nums length in store is == 2, if it is calculate gear ratio else continue
-
 
 if __name__ == '__main__':
     main()
