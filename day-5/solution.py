@@ -58,7 +58,6 @@ def part2(lines):
             else:
                 locs.append((start,end))
         seeds = locs
-    print(seeds)
     return min(seeds)[0]
 
 
