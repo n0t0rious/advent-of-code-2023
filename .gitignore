@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 
+# AOC input
+test_input.txt
+input.txt
+
 # C extensions
 *.so
 
@@ -19,6 +23,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.cfg
 
 # Installer logs
 pip-log.txt
